@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./cart.css"
-export default function Cart({cart,setCart, handleChange}) {
+const Cart = ({cart,setCart,handleChange})=> {
 const [price ,setPrice] =useState(0)
 const handleRemove =(id) =>{
   const remove = cart.filter((item)=>
@@ -10,7 +10,7 @@ setCart(remove)
 const handlePrice =()=>{
   let ans = 0;
   cart.map((item)=>{
-    ans += item.amount* item.price
+   return ans += item.amount* item.price
   })
   setPrice(ans)
 }
@@ -33,8 +33,8 @@ useEffect(()=>{
   </div>
   <div>  
 
-  <button onClick={()=>{ handleChange(item,+1)}}>+</button>
-  <button onClick={()=> { handleChange(item,-1)}}>-</button> 
+  <button onClick={()=>handleChange(item,+1)}>+</button>
+  <button onClick={()=>handleChange(item,-1)}>-</button> 
 
   </div>
   <div>
@@ -54,3 +54,4 @@ useEffect(()=>{
     </div>
   )
 }
+export default Cart;

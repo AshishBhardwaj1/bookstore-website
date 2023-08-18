@@ -27,7 +27,7 @@ const  handleClick=(item)=>{
   setCart([...cart,item])
 
 }
-const handleChange = (item ,d)=>{
+const handleChange =(item ,d)=>{
 console.log(item,d)
 let ind = -1;
 cart.forEach((data ,index)=>{
@@ -47,13 +47,13 @@ const [warning,setWarning] =useState(false)
 
 
 
-    <Navbar size= {cart.length} setShow={setShow} handleChange ={handleChange}/>
+    <Navbar size= {cart.length} setShow={setShow}  handleChange={handleChange}/>
     {
       show?
       <Shop handleClick ={handleClick}/>:    <Cart cart={cart} setCart={setCart}/>
     }
     {
-      warning&& <div className='warning' style={{height:"40px",backgroundColor:"red",position:"absolute" , width:"250px",rigth:"0",top:"10px",color:"white"}}>Item is already in your cart </div>
+      warning && <div className='warning' style={{height:"40px",backgroundColor:"red",position:"absolute" , width:"250px",left:"0",top:"10px",color:"white"}}>Item is already in your cart </div>
     }
    </div>
   );

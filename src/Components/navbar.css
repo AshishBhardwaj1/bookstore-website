@@ -17,7 +17,7 @@ nav{
     justify-content: space-between;
 }
 .my-shop{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: rgb(228, 212, 201);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -34,7 +34,7 @@ nav{
     background-color: dimgrey;
     padding:0 3px;
     font-weight: bolder;
-    color: red;
+    color: rgb(223, 202, 202);
     top: -10px;position: relative;
     border-radius: 50px;
 }
