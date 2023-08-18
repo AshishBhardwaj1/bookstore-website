@@ -47,10 +47,10 @@ const [warning,setWarning] =useState(false)
 
 
 
-    <Navbar size= {cart.length} setShow={setShow}  handleChange={handleChange}/>
+    <Navbar size= {cart.length} setShow={setShow}  />
     {
       show?
-      <Shop handleClick ={handleClick}/>:    <Cart cart={cart} setCart={setCart}/>
+      <Shop handleClick ={handleClick}/>:    <Cart cart={cart} setCart={setCart} handleChange={handleChange}/>
     }
     {
       warning && <div className='warning' style={{height:"40px",backgroundColor:"red",position:"absolute" , width:"250px",left:"0",top:"10px",color:"white"}}>Item is already in your cart </div>

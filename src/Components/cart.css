@@ -50,3 +50,11 @@ font-size: 2rem;
     color: red;
     font-weight: bold;
 }
+button {
+    width: 70px;
+    color: rgb(255, 255, 255);
+    background-color: darkgrey;
+    font-weight: bolder;
+    margin: 10px;
+    border-radius: 10px;
+}
