@@ -26,12 +26,17 @@ function App() {
     console.log(item, d);
     let ind = -1;
     cart.forEach((data, index) => {
-      if (data.id === item.id) ind = index;
+      if (data.id === item.id) {
+        ind = index;
+        console.log("yes");
+        setCart([...cart]);
+      }
     });
     const tempArr = cart;
     tempArr[ind].amount += d;
     if (tempArr[ind].amount === 0) {
       tempArr[ind].amount = 1;
+      console.log("s:", ...tempArr);
       setCart([...tempArr]);
     }
   };
